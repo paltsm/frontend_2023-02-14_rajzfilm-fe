@@ -34,9 +34,14 @@ class App extends Component<{},State>{
 	}
 
 	render(){
-		return <table>
-				{this.state.rajzfilmek.map((r)=> <tr><td>{r.nev}</td><td>{r.megjelenesEv}</td></tr>)}
+		return <div>
+			<table>
+				<thead className='thead'><td>név</td><td>év</td></thead>
+				<tbody>
+					{this.state.rajzfilmek.map((r)=> <tr><td>{r.nev}</td><td>{r.megjelenesEv}</td></tr>)}
+				</tbody>
 			</table>
+		</div>
 	
 	}
 }
